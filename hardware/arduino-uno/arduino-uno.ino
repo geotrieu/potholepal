@@ -28,8 +28,10 @@ void setup()
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
   //Set Speeds (calibrated for turning)
-  analogWrite(enA, 97);
-  analogWrite(enB, 130);
+  /*analogWrite(enA, 102);
+  analogWrite(enB, 130);*/
+  analogWrite(enA, 162);
+  analogWrite(enB, 190);
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   digitalWrite(in3, HIGH);
@@ -57,34 +59,25 @@ void loop()
  
   // Convert the time into a distance
   cm = (duration/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
-  if (cm > 15 && initCycles <= 0) {
+  if (cm > 10 && initCycles <= 0) {
     delay(125);
     digitalWrite(in1, LOW);
     digitalWrite(in2, LOW);
     digitalWrite(in3, LOW);
     digitalWrite(in4, LOW);
-    Serial.print("Hole found");
-    writeArduinoOnMatrix();
-    delay(500);
-    writeNothing();
-    delay(500);
-    writeArduinoOnMatrix();
-    delay(500);
-    writeNothing();
-    delay(500);
-    writeArduinoOnMatrix();
-    delay(500);
-    writeNothing();
-    delay(500);
+    Serial.println("HOLE1");
+    while(true) {
+      writeArduinoOnMatrix();
+      delay(500);
+      writeNothing();
+      delay(500);
+    }
   } else {
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
     digitalWrite(in3, HIGH);
     digitalWrite(in4, LOW);
   }
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
   if (initCycles > 0) initCycles--;
 }
 
