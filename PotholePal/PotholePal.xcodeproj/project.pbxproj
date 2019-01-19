@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		53E2C03821F38AEC004FDA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C03721F38AEC004FDA0A /* AppDelegate.swift */; };
 		53E2C03A21F38AEC004FDA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C03921F38AEC004FDA0A /* ViewController.swift */; };
-		53E2C03D21F38AEC004FDA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C03B21F38AEC004FDA0A /* Main.storyboard */; };
 		53E2C03F21F38AEE004FDA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C03E21F38AEE004FDA0A /* Assets.xcassets */; };
 		53E2C04221F38AEE004FDA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */; };
+		53E2C04A21F38BFD004FDA0A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C04921F38BFD004FDA0A /* SplashViewController.swift */; };
+		53E2C04E21F38CC3004FDA0A /* UIColor+HexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C04D21F38CC3004FDA0A /* UIColor+HexValue.swift */; };
+		53E2C05021F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C04F21F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift */; };
+		53E2C05321F38D81004FDA0A /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C05221F38D81004FDA0A /* UI.swift */; };
+		926CC4232FA239EB26578DAA /* Pods_PotholePal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B740D5A2844A3070E8E4B /* Pods_PotholePal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11983BCB6084C937E6A9D914 /* Pods-PotholePal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotholePal.release.xcconfig"; path = "Pods/Target Support Files/Pods-PotholePal/Pods-PotholePal.release.xcconfig"; sourceTree = "<group>"; };
 		53E2C03421F38AEC004FDA0A /* PotholePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PotholePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E2C03721F38AEC004FDA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E2C03921F38AEC004FDA0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		53E2C03C21F38AEC004FDA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53E2C03E21F38AEE004FDA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E2C04121F38AEE004FDA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53E2C04321F38AEE004FDA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53E2C04921F38BFD004FDA0A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		53E2C04D21F38CC3004FDA0A /* UIColor+HexValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValue.swift"; sourceTree = "<group>"; };
+		53E2C04F21F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddRemoveChildren.swift"; sourceTree = "<group>"; };
+		53E2C05221F38D81004FDA0A /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		734B740D5A2844A3070E8E4B /* Pods_PotholePal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PotholePal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D9F04213CF51BD0624FA53 /* Pods-PotholePal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotholePal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PotholePal/Pods-PotholePal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926CC4232FA239EB26578DAA /* Pods_PotholePal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1227F71FD9C43DAE466D7D99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6D9F04213CF51BD0624FA53 /* Pods-PotholePal.debug.xcconfig */,
+				11983BCB6084C937E6A9D914 /* Pods-PotholePal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		53E2C02B21F38AEC004FDA0A = {
 			isa = PBXGroup;
 			children = (
 				53E2C03621F38AEC004FDA0A /* PotholePal */,
 				53E2C03521F38AEC004FDA0A /* Products */,
+				1227F71FD9C43DAE466D7D99 /* Pods */,
+				56B029F96A9C4F805663DB55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,49 @@
 		53E2C03621F38AEC004FDA0A /* PotholePal */ = {
 			isa = PBXGroup;
 			children = (
+				53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */,
+				53E2C04921F38BFD004FDA0A /* SplashViewController.swift */,
 				53E2C03721F38AEC004FDA0A /* AppDelegate.swift */,
 				53E2C03921F38AEC004FDA0A /* ViewController.swift */,
-				53E2C03B21F38AEC004FDA0A /* Main.storyboard */,
 				53E2C03E21F38AEE004FDA0A /* Assets.xcassets */,
-				53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */,
 				53E2C04321F38AEE004FDA0A /* Info.plist */,
+				53E2C04B21F38C6B004FDA0A /* Extensions */,
+				53E2C05121F38D6F004FDA0A /* Global */,
 			);
 			path = PotholePal;
+			sourceTree = "<group>";
+		};
+		53E2C04B21F38C6B004FDA0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53E2C04C21F38C79004FDA0A /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53E2C04C21F38C79004FDA0A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				53E2C04D21F38CC3004FDA0A /* UIColor+HexValue.swift */,
+				53E2C04F21F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		53E2C05121F38D6F004FDA0A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				53E2C05221F38D81004FDA0A /* UI.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		56B029F96A9C4F805663DB55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				734B740D5A2844A3070E8E4B /* Pods_PotholePal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53E2C04621F38AEE004FDA0A /* Build configuration list for PBXNativeTarget "PotholePal" */;
 			buildPhases = (
+				3869302C9F217E3D3B89D489 /* [CP] Check Pods Manifest.lock */,
 				53E2C03021F38AEC004FDA0A /* Sources */,
 				53E2C03121F38AEC004FDA0A /* Frameworks */,
 				53E2C03221F38AEC004FDA0A /* Resources */,
+				DB6F3D408D28E051B31EC1AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,33 +183,73 @@
 			files = (
 				53E2C04221F38AEE004FDA0A /* LaunchScreen.storyboard in Resources */,
 				53E2C03F21F38AEE004FDA0A /* Assets.xcassets in Resources */,
-				53E2C03D21F38AEC004FDA0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3869302C9F217E3D3B89D489 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PotholePal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB6F3D408D28E051B31EC1AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PotholePal/Pods-PotholePal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PotholePal/Pods-PotholePal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53E2C03021F38AEC004FDA0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E2C04A21F38BFD004FDA0A /* SplashViewController.swift in Sources */,
 				53E2C03A21F38AEC004FDA0A /* ViewController.swift in Sources */,
+				53E2C05021F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift in Sources */,
 				53E2C03821F38AEC004FDA0A /* AppDelegate.swift in Sources */,
+				53E2C04E21F38CC3004FDA0A /* UIColor+HexValue.swift in Sources */,
+				53E2C05321F38D81004FDA0A /* UI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		53E2C03B21F38AEC004FDA0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53E2C03C21F38AEC004FDA0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,6 +379,7 @@
 		};
 		53E2C04721F38AEE004FDA0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D9F04213CF51BD0624FA53 /* Pods-PotholePal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +398,7 @@
 		};
 		53E2C04821F38AEE004FDA0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11983BCB6084C937E6A9D914 /* Pods-PotholePal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

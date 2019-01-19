@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PotholePal
 //
-//  Created by Kartik on 2019-01-19.
+//  Created by Thayallan Srinathan on 2019-01-19.
 //  Copyright © 2019 Thayallan Srinathan. All rights reserved.
 //
 
