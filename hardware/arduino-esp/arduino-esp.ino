@@ -16,7 +16,7 @@ char password[20] = "stanthemoose";
 WiFiClient client; 
 Adafruit_MQTT_Client mqtt(&client, MQTT_SERVER, MQTT_PORT, MQTT_USERNAME, MQTT_PASSWORD); 
 Adafruit_MQTT_Publish potholes = Adafruit_MQTT_Publish(&mqtt, MQTT_USERNAME "potholes");
-//Adafruit_MQTT_Subscribe chute_p = Adafruit_MQTT_Subscribe(&mqtt, MQTT_USERNAME "chute-p");4
+Adafruit_MQTT_Subscribe potholes_p = Adafruit_MQTT_Subscribe(&mqtt, MQTT_USERNAME "potholes-p");
 
 String arduinoprocess = "";
 bool mqttConnected;
@@ -31,11 +31,22 @@ void setup(){
     Serial.print(".");
   }
   //MQTT Init
-  mqttConnected = MQTT_connect();
+  mqtt.subscribe(&potholes_p);
+  mqttConnected = MQTT_connect(); 
   
 }
 
 void loop() {
+  Adafruit_MQTT_Subscribe *subscription;
+  while ((subscription = mqtt.readSubscription())) {
+    if (subscription == &potholes_p) {
+      String lastread;
+      lastread = ((char *)potholes_p.lastread);
+      if (lastread == "GO") {
+        Serial.println("GO"); 
+      }
+    }
+  }
   arduinoprocess = "";
   arduinoprocess = readSerial();
   char arduinoprocesschar[arduinoprocess.length() + 1];
@@ -43,7 +54,6 @@ void loop() {
   if (mqttConnected) {
     if (arduinoprocess != "") {
       potholes.publish(arduinoprocesschar);
-      Serial.println(arduinoprocesschar);
     }
   }
 }

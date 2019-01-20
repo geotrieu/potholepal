@@ -17,6 +17,8 @@ int echoPin = 12;    // Echo
 long duration, cm, inches;
 
 int initCycles = 5;
+bool activated = false;
+String arduinoprocess = "";
 
 byte arrow[] = { B00011000,B00011000,B00011000,B00011000,B00011000,B01111110,B00111100,B00011000};
 byte nothing[] = { B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000};
@@ -30,11 +32,11 @@ void setup()
   //Set Speeds (calibrated for turning)
   /*analogWrite(enA, 102);
   analogWrite(enB, 130);*/
-  analogWrite(enA, 162);
+  analogWrite(enA, 157);
   analogWrite(enB, 190);
-  digitalWrite(in1, HIGH);
+  digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
-  digitalWrite(in3, HIGH);
+  digitalWrite(in3, LOW);
   digitalWrite(in4, LOW);
 
   lc.shutdown(0,false);// turn off power saving, enables display
@@ -44,41 +46,50 @@ void setup()
 
 void loop()
 {
-  // Nothing here. We'll get to this in the next experiment.
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(5);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
- 
-  // Read the signal from the sensor: a HIGH pulse whose
-  // duration is the time (in microseconds) from the sending
-  // of the ping to the reception of its echo off of an object.
-  pinMode(echoPin, INPUT);
-  duration = pulseIn(echoPin, HIGH);
- 
-  // Convert the time into a distance
-  cm = (duration/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
-  if (cm > 10 && initCycles <= 0) {
-    delay(125);
-    digitalWrite(in1, LOW);
-    digitalWrite(in2, LOW);
-    digitalWrite(in3, LOW);
-    digitalWrite(in4, LOW);
-    Serial.println("HOLE1");
-    while(true) {
-      writeArduinoOnMatrix();
-      delay(500);
-      writeNothing();
-      delay(500);
-    }
-  } else {
-    digitalWrite(in1, HIGH);
-    digitalWrite(in2, LOW);
-    digitalWrite(in3, HIGH);
-    digitalWrite(in4, LOW);
+  arduinoprocess = "";
+  arduinoprocess = readSerial();
+  if (arduinoprocess == "G") {
+    Serial.println(arduinoprocess);
+    activated = true;
   }
-  if (initCycles > 0) initCycles--;
+  if (activated) {
+    // Nothing here. We'll get to this in the next experiment.
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(5);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+   
+    // Read the signal from the sensor: a HIGH pulse whose
+    // duration is the time (in microseconds) from the sending
+    // of the ping to the reception of its echo off of an object.
+    pinMode(echoPin, INPUT);
+    duration = pulseIn(echoPin, HIGH);
+   
+    // Convert the time into a distance
+    cm = (duration/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
+    if (cm > 10 && initCycles <= 0) {
+      //delay(125);
+      digitalWrite(in1, LOW);
+      digitalWrite(in2, LOW);
+      digitalWrite(in3, LOW);
+      digitalWrite(in4, LOW);
+      Serial.println("HOLE1");
+      activated = false;
+      for (int i = 0; i < 5; i++) {
+        writeArduinoOnMatrix();
+        delay(500);
+        writeNothing();
+        delay(500);
+      }
+    } else {
+      digitalWrite(in1, HIGH);
+      digitalWrite(in2, LOW);
+      digitalWrite(in3, HIGH);
+      digitalWrite(in4, LOW);
+    }
+    if (initCycles > 0) initCycles--;
+  }
 }
 
 void writeNothing() {
@@ -103,4 +114,16 @@ void writeArduinoOnMatrix() {
   lc.setRow(0,5,arrow[5]);
   lc.setRow(0,6,arrow[6]);
   lc.setRow(0,7,arrow[7]);
+}
+
+String readSerial() {
+  String input;
+  while (Serial.available()) {
+    char c = (char)Serial.read();
+    if (c != 0x0A && c != 0x0D) {
+      //Block Newline / Carriage Return Characters
+      input += c;
+    }
+  }
+  return input;
 }
