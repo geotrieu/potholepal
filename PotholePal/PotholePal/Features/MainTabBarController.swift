@@ -10,9 +10,9 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    let csvc1 = ComingSoonViewController()
+    let homeViewController = HomeViewController()
     let csvc2 = ComingSoonViewController()
-    let csvc3 = ComingSoonViewController()
+    let cameraViewController = CameraViewController()
 
     
     
@@ -54,7 +54,7 @@ extension MainTabBarController {
     }
     
     func createFirstViewController() -> UIViewController {
-        var navigationVC = PotholePalNavigationController(rootViewController: csvc1)
+        var navigationVC = PotholePalNavigationController(rootViewController: homeViewController)
         navigationVC = setupTabBarItem(for: navigationVC, title: "", imageName: "homeIcon", selectedImageName: "")
         return navigationVC
     }
@@ -66,7 +66,7 @@ extension MainTabBarController {
     }
     
     func createThirdViewController() -> UIViewController {
-        var navigationVC = PotholePalNavigationController(rootViewController: csvc3)
+        var navigationVC = PotholePalNavigationController(rootViewController: cameraViewController)
         navigationVC = setupTabBarItem(for: navigationVC, title: "", imageName: "myAccountIcon", selectedImageName: "")
         return navigationVC
     }

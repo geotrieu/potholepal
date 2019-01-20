@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3D8E6A6A3D4C0616F180A12B1AAEE9FD"
+               BlueprintIdentifier = "D96E8CC16582BE1E57AA3A6D7C4A80AC"
                BuildableName = "Pods_PotholePal.framework"
                BlueprintName = "Pods-PotholePal"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3D8E6A6A3D4C0616F180A12B1AAEE9FD"
+            BlueprintIdentifier = "D96E8CC16582BE1E57AA3A6D7C4A80AC"
             BuildableName = "Pods_PotholePal.framework"
             BlueprintName = "Pods-PotholePal"
             ReferencedContainer = "container:Pods.xcodeproj">
