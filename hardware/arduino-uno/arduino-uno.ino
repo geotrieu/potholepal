@@ -32,8 +32,8 @@ void setup()
   //Set Speeds (calibrated for turning)
   /*analogWrite(enA, 102);
   analogWrite(enB, 130);*/
-  analogWrite(enA, 157);
-  analogWrite(enB, 190);
+  analogWrite(enA, 140);
+  analogWrite(enB, 160);
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);
@@ -51,6 +51,7 @@ void loop()
   if (arduinoprocess == "G") {
     Serial.println(arduinoprocess);
     activated = true;
+    writeNothing();
   }
   if (activated) {
     // Nothing here. We'll get to this in the next experiment.
@@ -76,10 +77,12 @@ void loop()
       digitalWrite(in4, LOW);
       Serial.println("HOLE1");
       activated = false;
-      for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 4; i++) {
         writeArduinoOnMatrix();
         delay(500);
         writeNothing();
+        delay(500);
+        writeArduinoOnMatrix();
         delay(500);
       }
     } else {

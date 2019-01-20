@@ -5,7 +5,7 @@
 #include <ESP8266WiFi.h>
 //MQTT Details
 //#define MQTT_SERVER "209.197.184.197"
-#define MQTT_SERVER "100.64.130.73"
+#define MQTT_SERVER "100.64.130.153"
 #define MQTT_PORT 1883                    
 #define MQTT_USERNAME "" 
 #define MQTT_PASSWORD "" 
@@ -16,7 +16,7 @@ char password[20] = "stanthemoose";
 WiFiClient client; 
 Adafruit_MQTT_Client mqtt(&client, MQTT_SERVER, MQTT_PORT, MQTT_USERNAME, MQTT_PASSWORD); 
 Adafruit_MQTT_Publish potholes = Adafruit_MQTT_Publish(&mqtt, MQTT_USERNAME "potholes");
-Adafruit_MQTT_Subscribe potholes_p = Adafruit_MQTT_Subscribe(&mqtt, MQTT_USERNAME "potholes-p");
+Adafruit_MQTT_Subscribe potholes_p = Adafruit_MQTT_Subscribe(&mqtt, MQTT_USERNAME "potholes-a");
 
 String arduinoprocess = "";
 bool mqttConnected;
