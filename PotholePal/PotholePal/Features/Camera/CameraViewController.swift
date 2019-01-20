@@ -17,15 +17,13 @@ class CameraViewController: UIViewController {
     private var imageOutput: AVCapturePhotoOutput?
     private var preview: AVCaptureVideoPreviewLayer?
     private let previewView = UIView()
-    
+    let tapView = TapView()
     
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        
-        
-        layoutViews()
-        try? setupCamera()
+        tapView.backgroundColor = UI.Colors.purple
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,6 +67,10 @@ extension CameraViewController {
 
 extension CameraViewController {
     func layoutViews() {
+        view.addSubview(tapView)
+        tapView.easy.layout(CenterX(), CenterY(), Width(100), Height(100))
+    }
+    func layoutFullViews() {
         view.addSubview(previewView)
         previewView.easy.layout(Edges())
     }

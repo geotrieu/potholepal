@@ -15,7 +15,7 @@ class ConnectionController: UIViewController {
     private var browser: MCNearbyServiceBrowser!
     private var localPeerID: MCPeerID!
     private var session: MCSession!
-    let serviceType = "Pictochatr"
+    let serviceType = "potholepal"
     
     init() {
         super.init(nibName: nil, bundle: nil)

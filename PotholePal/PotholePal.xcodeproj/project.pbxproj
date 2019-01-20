@@ -12,7 +12,11 @@
 		5353AF1E21F46A5E009D6CB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF1D21F46A5E009D6CB5 /* CameraViewController.swift */; };
 		5353AF2121F46D85009D6CB5 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2021F46D85009D6CB5 /* ConnectionController.swift */; };
 		5353AF2321F46FA8009D6CB5 /* CameraFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2221F46FA8009D6CB5 /* CameraFlowController.swift */; };
-		5353AF2521F470AE009D6CB5 /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2421F470AE009D6CB5 /* TapViewController.swift */; };
+		5353AF2521F470AE009D6CB5 /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2421F470AE009D6CB5 /* TapView.swift */; };
+		5353AF2721F47547009D6CB5 /* ReportsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2621F47547009D6CB5 /* ReportsFlowController.swift */; };
+		5353AF2921F47841009D6CB5 /* ReportsViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2821F47841009D6CB5 /* ReportsViewControlller.swift */; };
+		5353AF2B21F47DF7009D6CB5 /* Potholes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2A21F47DF7009D6CB5 /* Potholes.swift */; };
+		5353AF2D21F47F6F009D6CB5 /* PotholeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353AF2C21F47F6F009D6CB5 /* PotholeView.swift */; };
 		53E2C03821F38AEC004FDA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C03721F38AEC004FDA0A /* AppDelegate.swift */; };
 		53E2C03F21F38AEE004FDA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C03E21F38AEE004FDA0A /* Assets.xcassets */; };
 		53E2C04221F38AEE004FDA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */; };
@@ -34,7 +38,11 @@
 		5353AF1D21F46A5E009D6CB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5353AF2021F46D85009D6CB5 /* ConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
 		5353AF2221F46FA8009D6CB5 /* CameraFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFlowController.swift; sourceTree = "<group>"; };
-		5353AF2421F470AE009D6CB5 /* TapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
+		5353AF2421F470AE009D6CB5 /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
+		5353AF2621F47547009D6CB5 /* ReportsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsFlowController.swift; sourceTree = "<group>"; };
+		5353AF2821F47841009D6CB5 /* ReportsViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewControlller.swift; sourceTree = "<group>"; };
+		5353AF2A21F47DF7009D6CB5 /* Potholes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potholes.swift; sourceTree = "<group>"; };
+		5353AF2C21F47F6F009D6CB5 /* PotholeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeView.swift; sourceTree = "<group>"; };
 		53E2C03421F38AEC004FDA0A /* PotholePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PotholePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E2C03721F38AEC004FDA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53E2C03E21F38AEE004FDA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +95,7 @@
 				5353AF1D21F46A5E009D6CB5 /* CameraViewController.swift */,
 				5353AF2021F46D85009D6CB5 /* ConnectionController.swift */,
 				5353AF2221F46FA8009D6CB5 /* CameraFlowController.swift */,
-				5353AF2421F470AE009D6CB5 /* TapViewController.swift */,
+				5353AF2421F470AE009D6CB5 /* TapView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -95,6 +103,9 @@
 		5353AF1F21F46BFF009D6CB5 /* Reports */ = {
 			isa = PBXGroup;
 			children = (
+				5353AF2621F47547009D6CB5 /* ReportsFlowController.swift */,
+				5353AF2821F47841009D6CB5 /* ReportsViewControlller.swift */,
+				5353AF2C21F47F6F009D6CB5 /* PotholeView.swift */,
 			);
 			path = Reports;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 			children = (
 				53E2C05221F38D81004FDA0A /* UI.swift */,
 				53E2C05D21F3A8A4004FDA0A /* PotholePalNavigationController.swift */,
+				5353AF2A21F47DF7009D6CB5 /* Potholes.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -307,11 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5353AF2921F47841009D6CB5 /* ReportsViewControlller.swift in Sources */,
 				53E2C04A21F38BFD004FDA0A /* SplashViewController.swift in Sources */,
+				5353AF2721F47547009D6CB5 /* ReportsFlowController.swift in Sources */,
 				53E2C05021F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift in Sources */,
-				5353AF2521F470AE009D6CB5 /* TapViewController.swift in Sources */,
+				5353AF2521F470AE009D6CB5 /* TapView.swift in Sources */,
 				53E2C03821F38AEC004FDA0A /* AppDelegate.swift in Sources */,
 				53E2C05A21F3A6F7004FDA0A /* MainTabBarController.swift in Sources */,
+				5353AF2D21F47F6F009D6CB5 /* PotholeView.swift in Sources */,
 				5353AF1A21F44651009D6CB5 /* MosquittoServerController.swift in Sources */,
 				5353AF1E21F46A5E009D6CB5 /* CameraViewController.swift in Sources */,
 				53E2C05C21F3A749004FDA0A /* ComingSoonViewController.swift in Sources */,
@@ -320,6 +335,7 @@
 				53E2C04E21F38CC3004FDA0A /* UIColor+HexValue.swift in Sources */,
 				5353AF2121F46D85009D6CB5 /* ConnectionController.swift in Sources */,
 				53E2C05321F38D81004FDA0A /* UI.swift in Sources */,
+				5353AF2B21F47DF7009D6CB5 /* Potholes.swift in Sources */,
 				5353AF2321F46FA8009D6CB5 /* CameraFlowController.swift in Sources */,
 				53E2C05E21F3A8A4004FDA0A /* PotholePalNavigationController.swift in Sources */,
 			);

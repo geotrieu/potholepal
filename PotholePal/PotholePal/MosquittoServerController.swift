@@ -30,8 +30,7 @@ extension MosquittoServerController {
         
         let mqttClient = MQTT.newConnection(mqttConfig)
         
-        //print("fuck salopan")
-        //print("\(mqttClient.isConnected)")
+
         
         mqttClient.subscribe("potholes", qos: 2)
         

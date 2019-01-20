@@ -17,7 +17,8 @@ class CameraFlowController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        
+        self.cameraController.tapView.delegate = self
+        start()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,5 +35,15 @@ extension CameraFlowController {
 extension CameraFlowController {
     func presentCameraController() {
         add(childController: cameraController)
+        cameraController.layoutViews()
+    }
+}
+
+extension CameraFlowController: TapViewDelegate {
+    func didTapView() {
+        print("okk")
+        //cameraController.layoutFullViews()
+        //try? cameraController.setupCamera()
+        let connection = ConnectionController()
     }
 }

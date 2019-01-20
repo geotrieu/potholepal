@@ -11,8 +11,8 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     let homeViewController = HomeViewController()
-    let csvc2 = ComingSoonViewController()
-    let cameraViewController = CameraViewController()
+    let reportsFlowController = ReportsFlowController()
+    let cameraViewController = CameraFlowController()
 
     
     
@@ -60,7 +60,7 @@ extension MainTabBarController {
     }
     
     func createSecondViewController() -> UIViewController {
-        var navigationVC = PotholePalNavigationController(rootViewController: csvc2)
+        var navigationVC = PotholePalNavigationController(rootViewController: reportsFlowController)
         navigationVC = setupTabBarItem(for: navigationVC, title: "", imageName: "reportIcon", selectedImageName: "")
         return navigationVC
     }

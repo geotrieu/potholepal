@@ -1,5 +1,5 @@
 //
-//  TapViewController.swift
+//  Potholes.swift
 //  PotholePal
 //
 //  Created by Thayallan Srinathan on 2019-01-20.
@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+struct PotholePal {
+    
+    static var potholes = [UIView]()
+}
+
+
