@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		53E2C03821F38AEC004FDA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C03721F38AEC004FDA0A /* AppDelegate.swift */; };
-		53E2C03A21F38AEC004FDA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C03921F38AEC004FDA0A /* ViewController.swift */; };
 		53E2C03F21F38AEE004FDA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C03E21F38AEE004FDA0A /* Assets.xcassets */; };
 		53E2C04221F38AEE004FDA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */; };
 		53E2C04A21F38BFD004FDA0A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C04921F38BFD004FDA0A /* SplashViewController.swift */; };
 		53E2C04E21F38CC3004FDA0A /* UIColor+HexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C04D21F38CC3004FDA0A /* UIColor+HexValue.swift */; };
 		53E2C05021F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C04F21F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift */; };
 		53E2C05321F38D81004FDA0A /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C05221F38D81004FDA0A /* UI.swift */; };
+		53E2C05521F3A2CE004FDA0A /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C05421F3A2CE004FDA0A /* AppFlowController.swift */; };
+		53E2C05A21F3A6F7004FDA0A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C05921F3A6F7004FDA0A /* MainTabBarController.swift */; };
+		53E2C05C21F3A749004FDA0A /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C05B21F3A749004FDA0A /* ComingSoonViewController.swift */; };
+		53E2C05E21F3A8A4004FDA0A /* PotholePalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2C05D21F3A8A4004FDA0A /* PotholePalNavigationController.swift */; };
 		926CC4232FA239EB26578DAA /* Pods_PotholePal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B740D5A2844A3070E8E4B /* Pods_PotholePal.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +25,6 @@
 		11983BCB6084C937E6A9D914 /* Pods-PotholePal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotholePal.release.xcconfig"; path = "Pods/Target Support Files/Pods-PotholePal/Pods-PotholePal.release.xcconfig"; sourceTree = "<group>"; };
 		53E2C03421F38AEC004FDA0A /* PotholePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PotholePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E2C03721F38AEC004FDA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53E2C03921F38AEC004FDA0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53E2C03E21F38AEE004FDA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E2C04121F38AEE004FDA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53E2C04321F38AEE004FDA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +32,10 @@
 		53E2C04D21F38CC3004FDA0A /* UIColor+HexValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValue.swift"; sourceTree = "<group>"; };
 		53E2C04F21F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddRemoveChildren.swift"; sourceTree = "<group>"; };
 		53E2C05221F38D81004FDA0A /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		53E2C05421F3A2CE004FDA0A /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		53E2C05921F3A6F7004FDA0A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		53E2C05B21F3A749004FDA0A /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		53E2C05D21F3A8A4004FDA0A /* PotholePalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholePalNavigationController.swift; sourceTree = "<group>"; };
 		734B740D5A2844A3070E8E4B /* Pods_PotholePal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PotholePal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D9F04213CF51BD0624FA53 /* Pods-PotholePal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PotholePal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PotholePal/Pods-PotholePal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,11 +85,12 @@
 				53E2C04021F38AEE004FDA0A /* LaunchScreen.storyboard */,
 				53E2C04921F38BFD004FDA0A /* SplashViewController.swift */,
 				53E2C03721F38AEC004FDA0A /* AppDelegate.swift */,
-				53E2C03921F38AEC004FDA0A /* ViewController.swift */,
-				53E2C03E21F38AEE004FDA0A /* Assets.xcassets */,
+				53E2C05421F3A2CE004FDA0A /* AppFlowController.swift */,
 				53E2C04321F38AEE004FDA0A /* Info.plist */,
+				53E2C05821F3A69A004FDA0A /* Features */,
 				53E2C04B21F38C6B004FDA0A /* Extensions */,
 				53E2C05121F38D6F004FDA0A /* Global */,
+				53E2C05721F3A319004FDA0A /* Resources */,
 			);
 			path = PotholePal;
 			sourceTree = "<group>";
@@ -109,8 +116,26 @@
 			isa = PBXGroup;
 			children = (
 				53E2C05221F38D81004FDA0A /* UI.swift */,
+				53E2C05D21F3A8A4004FDA0A /* PotholePalNavigationController.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		53E2C05721F3A319004FDA0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53E2C03E21F38AEE004FDA0A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		53E2C05821F3A69A004FDA0A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				53E2C05921F3A6F7004FDA0A /* MainTabBarController.swift */,
+				53E2C05B21F3A749004FDA0A /* ComingSoonViewController.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 		56B029F96A9C4F805663DB55 /* Frameworks */ = {
@@ -239,11 +264,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E2C04A21F38BFD004FDA0A /* SplashViewController.swift in Sources */,
-				53E2C03A21F38AEC004FDA0A /* ViewController.swift in Sources */,
 				53E2C05021F38CFD004FDA0A /* UIViewController+AddRemoveChildren.swift in Sources */,
 				53E2C03821F38AEC004FDA0A /* AppDelegate.swift in Sources */,
+				53E2C05A21F3A6F7004FDA0A /* MainTabBarController.swift in Sources */,
+				53E2C05C21F3A749004FDA0A /* ComingSoonViewController.swift in Sources */,
+				53E2C05521F3A2CE004FDA0A /* AppFlowController.swift in Sources */,
 				53E2C04E21F38CC3004FDA0A /* UIColor+HexValue.swift in Sources */,
 				53E2C05321F38D81004FDA0A /* UI.swift in Sources */,
+				53E2C05E21F3A8A4004FDA0A /* PotholePalNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

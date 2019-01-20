@@ -12,9 +12,8 @@ import UIKit
 
 struct UI {
     struct Colors {
-        static let neonBlue = UIColor(hexValue: 0x409BFF)
         
-        static let red = UIColor(hexValue: 0xE05C6C)
+        static let purple = UIColor(hexValue: 0x7E13DC)
         static let white = UIColor.white
         static let black = UIColor.black
         static let blue = UIColor(hexValue: 0x58A6FF)
