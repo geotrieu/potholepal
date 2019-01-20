@@ -1,0 +1,6 @@
+framework module Pods_PotholePal {
+  umbrella header "Pods-PotholePal-umbrella.h"
+
+  export *
+  module * { export * }
+}
