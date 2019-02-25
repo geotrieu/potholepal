@@ -30,13 +30,13 @@ class PotholeView: UIView {
     private let latitudeLabel = UILabel().then {
         $0.textColor = UI.Colors.purple
         $0.font = UI.Font.demiBold(18)
-        $0.text = "Latitude: 87738722"
+        $0.text = "Latitude: 43.659568"
     }
     
     private let longitudeLabel = UILabel().then {
         $0.textColor = UI.Colors.purple
         $0.font = UI.Font.demiBold(18)
-        $0.text = "Longitude: 88777882"
+        $0.text = "Longitude: -79.397635"
     }
     
     private let purpleView = UIView()

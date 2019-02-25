@@ -11,7 +11,15 @@ import UIKit
 import Foundation
 import Moscapsule
 
+protocol MosquittoDelegate: class {
+    func didDetect()
+}
+
 class MosquittoServerController: UIViewController {
+    var value: Int = 0
+    var recentString: String = ""
+    weak var delegate: MosquittoDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,15 +27,21 @@ class MosquittoServerController: UIViewController {
 }
 
 extension MosquittoServerController {
-    func GO(){
-        let mqttConfig = MQTTConfig(clientId: "imyodaddy", host: "100.64.130.73", port: 1883, keepAlive: 600)
+    func start(){
+        let mqttConfig = MQTTConfig(clientId: "imyodaddy", host: "100.64.130.153", port: 1883, keepAlive: 600)
         mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "", password: "")
         mqttConfig.cleanSession = true
         mqttConfig.onMessageCallback = { mqttMessage in
             //NSLog("MQTT Message received: payload=\(mqttMessage.payloadString?.first)")
             print("\(mqttMessage.payloadString!)")
+    
+            if mqttMessage.payloadString!.first == "H" {
+                self.adder()
+                print("ok")
+                 self.delegate?.didDetect()
+            }
+           
         }
-        
         let mqttClient = MQTT.newConnection(mqttConfig)
         
 
@@ -35,12 +49,28 @@ extension MosquittoServerController {
         mqttClient.subscribe("potholes", qos: 2)
         
         //lol
-        let deadline = DispatchTime.now() + 2.0
+        let deadline = DispatchTime.now() + 3000000.0
         DispatchQueue.main.asyncAfter(deadline: deadline, execute: {
-            mqttClient.publish(string: "GO", topic: "potholes-a", qos: 0, retain: true)
             print("\(mqttClient.isConnected)")
             
         })
     }
+    
+    func hole1hole2() {
+        if value == 0 {
+            value += 1
+        }
+        else if value == 1 {
+            value += 1
+        }
+        else {
+            
+        }
+    }
+    
+    func adder() {
+        value += 1
+    }
+
 }
 
